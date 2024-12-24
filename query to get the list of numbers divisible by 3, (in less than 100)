@@ -1,0 +1,5 @@
+WITH manoj(n) AS (
+  SELECT 1 from dual
+  UNION ALL
+    SELECT n+1 FROM manoj WHERE n < 100)
+SELECT * FROM manoj where MOD(n, 3) = 0 order by n desc;
